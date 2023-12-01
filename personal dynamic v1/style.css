@@ -1,0 +1,59 @@
+body{
+    background-color: beige;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navigation-bar{
+    border: 2px solid black;
+    border-bottom-left-radius:0.5rem;
+    border-bottom-right-radius:0.5rem;
+    background-color: rgb(48, 158, 158);
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.navigation-bar > *{
+    text-decoration:none;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: black;
+    display: block;
+    text-align:center;
+    padding: 5px 10px;
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+.navigation-bar > .home-name{
+    float: left;
+}
+.navigation-bar > .about-nav{
+    margin-right: 60px;
+}
+.navigation-bar > *:hover{
+    background-color: rgb(37, 174, 174);
+}
+
+
+.introduction{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color:cadetblue;
+    margin-top: 50px;
+    height: 200px;
+}
+
+.introduction >.main-intro{
+    display: inline-flex;
+    flex-direction: column;
+    border: 2px solid;
+    
+}
+
+.introduction > .profile-picture-cont{
+    border: 1px solid;
+}
+.introduction > .profile-picture-cont > #profile-picture{
+    padding-left: 50px;
+    width:40%;
+}
