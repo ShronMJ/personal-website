@@ -1,0 +1,35 @@
+<%- include("header.html") %>
+
+        <% if (locals.content) { %>
+            <section class= "right <%= content %>" >
+                <%- include(`navContent/${content}.html`) %>
+            </section>
+        <% } else{ %>
+            <section class="about-me">
+                <h1>About Me</h1>
+                <p>A Physics graduate who loves to and versatile in R&D, data science,
+                and web development based in Penang. Currently an event crew freelancer.</p>
+            </section>
+            <% } %>
+    </div>
+    <footer>
+        <div>
+            <h2>Contacts</h2>
+            <p>+60167616375</p>
+            <p>rongreenh13@gmail.com</p>
+            <p>Gelugor, Penang</p>
+        </div>
+        <div>
+            <h2>See Also</h2>
+            <a href="#">GitHub</a>
+            <a href="#">LinkendIn</a>
+        </div>
+        <div>
+            <h2>CV?</h2>
+            <p>Referral is provided in resume</p>
+            <a href="#">Download CV</a>
+        </div>
+    </footer>
+    <script src="script/ui.js"></script>
+</body>
+</html>

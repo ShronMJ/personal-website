@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box; /*include the padding and border in element total width/height*/
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;
+}
+
+:root{
+    --navy-color: #27005D;
+    --purple-color: #9400FF;
+    --blue-color: #AED2FF;
+    --cold-color: #E4F1FF;
+    --hover-color: #7a06cd;
+}
+
+body{
+    background-color: var(--navy-color) !important;
+}
+nav{
+    background-color: var(--purple-color);
+    position:relative; /*relative cannot set height/width with %*/
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+/**/
+nav .home-name,
+nav .nav-links{
+    color: var(--cold-color);
+    display: inline-block;
+    margin-right: 2%;
+}
+nav .nav-links a{
+    color: var(--cold-color);
+}
+nav .nav-links li{
+    display: inline-block;
+    justify-content: space-evenly;
+    padding: 0.3rem 1.7rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+nav .home-name{
+    margin-right: 15%;
+    margin-left: 2%;
+    padding: 0.3rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+nav .nav-links li:hover,
+nav .home-name:hover{
+    background-color:var(--hover-color);
+    border-radius: 20%;
+}
+/*Navigation ends----------------------------------------------------*/
+
+.mid-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-bottom: 5%;
+    color: var(--cold-color);
+}
+#profile-picture{
+    border-radius: 50%;
+}
+
+.right{
+    grid-row: 1/3;
+    grid-column: 2/3;
+}
+
+
+/*footer------------------------------------------------------------------*/
+
+footer{
+    background-color: var(--purple-color);
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 3%;
+    align-items:flex-start; 
+}
+
+footer div,
+footer div a{
+    color: var(--cold-color);
+}
