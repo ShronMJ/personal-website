@@ -4,7 +4,7 @@ const body = document.querySelector('body');
 
 const seemore_project = document.querySelectorAll("#project .main-content .card span");
 const bg_project = document.querySelectorAll("#project .main-content .card .card-bg");
-const h3_c_project = document.querySelector("#project .main-content .card.c h3");
+const h3_c_project = document.querySelector("#project .main-content .card.d h3");
 const p_project = document.querySelectorAll("#project .main-content .card p");
 
 /*Navigation-------------------------------------------- */
@@ -41,7 +41,7 @@ for (let i = 0; i < seemore_project.length; i++) {
             seemore_project[i].innerHTML = "see more..";
         p_project[2*i +1].classList.toggle("active");
         p_project[2*i].classList.toggle("active");
-        if(i===2){
+        if(i===3){
             h3_c_project.classList.toggle("active");
         }
     })

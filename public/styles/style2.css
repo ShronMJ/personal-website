@@ -29,7 +29,7 @@
     max-width: 275px;
 }
 
-#project .main-content .card.c h3.active{
+#project .main-content .card.d h3.active{
     display: none;
 }
 #project .main-content .card p{
@@ -62,13 +62,13 @@
 #project .main-content .card .card-bg.active{
     display: none;
 }
-#project .main-content .card.c .card-bg{
+#project .main-content .card.d .card-bg{
     display: block;
     background-image: url('../img/sketchup.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
-#project .main-content .card.c .card-bg.active{
+#project .main-content .card.d .card-bg.active{
     display: block;
     background-image: url('../img/crib.png');
     background-repeat: no-repeat;
@@ -91,13 +91,11 @@
     justify-items: center;
 }
 #background .content .row .column.b{
-    display: grid;
-    grid-template-columns: 2rem 1fr 2rem;
-    grid-template-rows: 2rem 1fr 2rem;
-    justify-items: center;
-    align-items: center;
     width: 80%;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #background .content .row.a{
     grid-row: 1/2;
@@ -129,14 +127,16 @@
     font-size: 1rem;
 }
 #background .content .row .column.b p:first-child{
-    grid-area: 1/1/2/2;
-    padding-left: 4rem;
+    width: 100%;
+    text-align: start;
+    padding-left: 1rem;
     font-weight: 600;
     font-size: 1.3rem;
 }
 #background .content .row .column.b p:last-child{
-    grid-area: 3/3/4/4;
-    padding-right: 4rem;
+    width: 100%;
+    text-align: end;
+    padding-right: 1rem;
     font-weight: 600;
     font-size: 1.3rem;
 }
@@ -145,18 +145,15 @@
 #background .content .row .column.b img{
     border-radius: 50%;
     border: 4px solid var(--buttoncolor);
-    grid-area: 1/2/4/3;
-    min-height: auto;
-    max-width: 50%;
-    min-width: 6rem;
-    
+    height: 7rem;
+    width: 7rem;
 }
 #background .content .row.a .column.b::before,
 #background .content .row.b .column.b::before{
     content: '';
     position: absolute;
     width: 4px;
-    height: 130%;
+    height: 120%;
     background-color: var(--buttoncolor);
     left: 50%;
     top: 50%;
@@ -192,6 +189,8 @@ footer{
     display: block;
     color: var(--textcolor);
     margin-top: 0.7rem;
+    text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
+                1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }
 #download-button {
     background:var(--buttoncolor);
@@ -243,6 +242,10 @@ footer{
     #introduction{
         flex-direction: column-reverse;
     }
+    #introduction .about{
+        font-size: 1rem;
+        line-height: 25px;
+    }
     #introduction .intro-cont #name,
     #introduction .intro-cont #specialist{
         text-align: center; 
@@ -250,6 +253,12 @@ footer{
     #introduction .dp-cont{
         margin: 1rem;
     }
+
+    /*expertise*/
+    #expertise .boxes{
+        justify-content: center;
+      }
+
     /*background*/
     #background .content .row.a,
     #background .content .row.b,
@@ -259,11 +268,9 @@ footer{
         padding: 0;
     }
     #background .content .row .column.b{
-        display: block;
-        position: relative;
         order: 1;
         grid-row: 1/span 2;
-        padding: 0;
+        padding: 10px 0;
     }
     #background .content .row .column.a{
         padding-left: 1rem;
@@ -288,29 +295,36 @@ footer{
     }
     #background .content .row .column.b img{
         border: 2px solid var(--buttoncolor);
-        position: absolute;
         top: 25%;
+        height: 5rem;
+        width: 5rem;
     }
     #background .content .row .column.b p:first-child{
-        position: absolute;
         font-size: 1rem;
-        top: 0;
-        right: 0;
-        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+        padding-left: 0;
+        text-align: end;
     }
     #background .content .row .column.b p:last-child{
-        position: absolute;
         font-size: 1rem;
-        bottom: 0;
-        right: 0;
-        padding-bottom: 1.5rem;
+        padding-top: 1rem;
         padding-right: 0;
+    }
+    #background .content .row.c .column.b p{
+        visibility: hidden;
+        position: relative;
+    }
+    #background .content .row.c .column.b p:last-child::after{
+        visibility: visible;
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        content: "Present & Future";
     }
     #background .content .row.a .column.b::before,
     #background .content .row.b .column.b::before{
         width: 2px;
         height: 100%;
-        left: 0;
         top: 41%;
     }
     .footer-top .void{
@@ -322,6 +336,11 @@ footer{
     .footer-top .content div p,
     .footer-top .content div a{
         font-size: 0.8rem;
+    }
+
+    .footer-top .content div *,
+    .footer-top .content div a{
+        text-shadow: none;
     }
     .footer-top .content div.mid{
         padding: 0 1rem;
