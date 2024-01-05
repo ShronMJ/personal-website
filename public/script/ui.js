@@ -4,7 +4,7 @@ const body = document.querySelector('body');
 
 const seemore_project = document.querySelectorAll("#project .main-content .card span");
 const bg_project = document.querySelectorAll("#project .main-content .card .card-bg");
-const h3_c_project = document.querySelector("#project .main-content .card.d h3");
+const h3_project = document.querySelectorAll("#project .main-content .card h3");
 const p_project = document.querySelectorAll("#project .main-content .card p");
 
 /*Navigation-------------------------------------------- */
@@ -36,21 +36,15 @@ body.addEventListener('click', (e)=>{
 for (let i = 0; i < seemore_project.length; i++) {
     seemore_project[i].addEventListener("click", ()=>{
         bg_project[i].classList.toggle("active");
-        seemore_project[i].innerHTML==="see more.."?
-            seemore_project[i].innerHTML = "back":
+        if(seemore_project[i].innerHTML==="see more.."){
+            seemore_project[i].innerHTML = "back";
+            seemore_project[i].style.marginLeft = "32px";
+        }else{
             seemore_project[i].innerHTML = "see more..";
+            seemore_project[i].style.marginLeft = "15px";
+        }  
         p_project[2*i +1].classList.toggle("active");
         p_project[2*i].classList.toggle("active");
-        if(i===3){
-            h3_c_project.classList.toggle("active");
-        }
+        h3_project[i].classList.toggle("active");
     })
 }
-
-function externalLinks() {
-    for(var c = document.getElementsByTagName("a"), a = 0; a < c.length;a++){
-        var b = c[a];
-        b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank")
-    }
-};
-externalLinks();

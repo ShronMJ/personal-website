@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/*Overall style*/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box; /*include the padding and border in element total width/height*/
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;
+    z-index: 0;
+    scroll-behavior: smooth;
+}
+
+:root{
+    /*navigation & footer*/
+    --bg-navfooter: #1B262C;
+    --button-navfooter: #10466a;
+    --text-navfooter: #E4F1FF;
+    --hover-navfooter: #24323a;
+
+    /*main content*/
+    --bg-content1: #e6edf8;
+    --bg-content2: #3282B8;
+    --text-content: #000000;
+    --text-light-content: #0c1439;
+    --name-content: #0e1a3d;
+    --box-content: #dee4f1;
+    --line-content: #1B262C;
+    --line-light-content: #2a3e49;
+}
+
+body{
+    background-color: var(--bg-content1);
+    min-height: 100vh;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+section{
+    padding: 2rem 4rem;
+    width: 100%;
+}
+
+section h2{
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 2rem;
+}
+section h2::before{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--line-content);
+  left: 0;
+  bottom: 0;
+}
+

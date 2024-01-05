@@ -1,0 +1,138 @@
+@media(max-width:800px) {
+    section{
+        padding: 2rem 2rem;
+    }
+    /*Navigation*/
+    nav .nav-links{
+        display: none;
+    }
+    nav .nav-links.active{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 5rem;
+        right: 0;
+        margin-right: 0;
+        padding: 1rem;
+        align-items: center;
+        justify-content: space-evenly;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        width: 17rem;
+        height: 21rem;
+        background-color: var(--bg-navfooter);
+    }
+    nav i.fa-solid{
+        display: block;
+    }
+    /*introduction*/
+    #introduction{
+        flex-direction: column-reverse;
+    }
+    #introduction .about{
+        font-size: 1rem;
+        line-height: 25px;
+    }
+    #introduction .intro-cont #name,
+    #introduction .intro-cont #specialist{
+        text-align: center; 
+    }
+    #introduction .dp-cont{
+        margin: 1rem;
+    }
+
+    /*expertise*/
+    #expertise .boxes{
+        justify-content: center;
+      }
+
+    /*background*/
+    #background .content .row.a,
+    #background .content .row.b,
+    #background .content .row.c{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 0;
+    }
+    #background .content .row .column.b{
+        order: 1;
+        grid-row: 1/span 2;
+        padding: 10px 0;
+    }
+    #background .content .row .column.a{
+        padding-left: 1rem;
+        text-align: left;
+        line-height: 18px;
+        order: 2;
+    }
+    #background .content .row .column.c{
+        padding-left: 1rem;
+        line-height: 18px;
+        order: 3;
+    }
+    #background .content .row .column h3{
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 0.5rem 0;
+    }
+    #background .content .row .column p{
+        font-weight: 400;
+        font-size: 0.8rem;
+        padding-bottom: 0.5rem;
+    }
+    #background .content .row .column.b img{
+        border-width: 2px;
+        top: 25%;
+        height: 5rem;
+        width: 5rem;
+    }
+    #background .content .row .column.b p:first-child{
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 0;
+        text-align: end;
+    }
+    #background .content .row .column.b p:last-child{
+        font-size: 1rem;
+        padding-top: 1rem;
+        padding-right: 0;
+    }
+    #background .content .row.c .column.b p{
+        visibility: hidden;
+        position: relative;
+    }
+    #background .content .row.c .column.b p:last-child::after{
+        visibility: visible;
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        content: "Present & Future";
+    }
+    #background .content .row.a .column.b::before,
+    #background .content .row.b .column.b::before{
+        width: 2px;
+        height: 100%;
+        top: 41%;
+    }
+    .footer-top .void{
+        display: none;
+    }
+    .footer-top .content{
+        width: 100%;
+    }
+    .footer-top .content div :is(p, a){
+        font-size: 0.8rem;
+    }
+    #download-button {
+        padding: 0.7rem 1.3rem;
+        margin: 0.5rem;
+    }
+
+    .footer-top .content div *,
+    .footer-top .content div a{
+        text-shadow: none;
+    }
+    .footer-top .content div.mid{
+        padding: 0 1rem;
+    }
+}
