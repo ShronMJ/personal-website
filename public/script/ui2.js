@@ -51,7 +51,7 @@ for (let i = 0; i < seemore_project.length; i++) {
     })
 }
 
-//Footer----------------------------------------------------------------------------
+//Footer----------------------------------------------------------------------------/
 
 for(let i=0;i<footer.length;i++){
     footer[i].addEventListener("click", ()=>{
@@ -59,17 +59,3 @@ for(let i=0;i<footer.length;i++){
         footer[1-i].classList.toggle("active");
     })
 }
-
-function responsiveContent(){
-    var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if(screenWidth<=780){
-        footer[0].childNodes[1].innerHTML = "Contact <span style = 'font-size: 0.7rem'>/ See Also<span>";
-        footer[1].childNodes[1].innerHTML = "See Also <span style = 'font-size: 0.7rem'>/ Contact<span>";
-    }else{
-        footer[0].childNodes[1].innerHTML = "Contact";
-        footer[1].childNodes[1].innerHTML = "See Also";
-    }
-}
-
-window.addEventListener("resize",responsiveContent);
-responsiveContent();

@@ -1,6 +1,6 @@
-@media(max-width:800px) {
+@media(max-width:780px) {
     section{
-        padding: 2rem 2rem;
+        padding: 1.5rem 1rem;
     }
     /*Navigation*/
     nav .nav-links{
@@ -33,8 +33,7 @@
         font-size: 1rem;
         line-height: 25px;
     }
-    #introduction .intro-cont #name,
-    #introduction .intro-cont #specialist{
+    #introduction .intro-cont :is(#name, #specialist){
         text-align: center; 
     }
     #introduction .dp-cont{
@@ -42,14 +41,24 @@
     }
 
     /*expertise*/
-    #expertise .boxes{
-        justify-content: center;
-      }
-
+    #expertise .boxes .box{
+        padding: 8px;
+        min-width: 10rem;
+    }
+    #expertise .boxes .box .content p{
+        font-size: 14px;
+    }
+    #expertise .boxes .box .content h3{
+        font-size: 17px
+    }
+    #expertise .boxes .box i{
+        margin: 0;
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+    }
     /*background*/
-    #background .content .row.a,
-    #background .content .row.b,
-    #background .content .row.c{
+    #background .content :is(.row.a, .row.b, .row.c){
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr 1fr;
         padding: 0;
@@ -108,31 +117,36 @@
         right: 0;
         content: "Present & Future";
     }
-    #background .content .row.a .column.b::before,
-    #background .content .row.b .column.b::before{
+    #background .content :is(.row.a, .row.b) .column.b::before{
         width: 2px;
         height: 100%;
         top: 41%;
     }
-    .footer-top .void{
-        display: none;
+    /*footer*/
+    .footer-top{
+        width: 90%;
     }
-    .footer-top .content{
-        width: 100%;
-    }
-    .footer-top .content div :is(p, a){
+    .footer-top div a{
         font-size: 0.8rem;
     }
-    #download-button {
-        padding: 0.7rem 1.3rem;
-        margin: 0.5rem;
-    }
-
-    .footer-top .content div *,
-    .footer-top .content div a{
+    .footer-top div :is(h3, a){
         text-shadow: none;
     }
-    .footer-top .content div.mid{
-        padding: 0 1rem;
+    .footer-top div h3:hover {
+        border-radius: 4px;
+        background:var(--hover-navfooter);
+        cursor: pointer;
+    }
+    .footer-top div:first-child{
+        display: block;
+    }
+    .footer-top div:last-of-type{
+        display: none;
+    }
+    .footer-top div:first-child.active{
+        display: none;
+    }
+    .footer-top div:last-of-type.active{
+        display: block;
     }
 }

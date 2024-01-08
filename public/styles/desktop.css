@@ -108,6 +108,7 @@ nav i.fa-bars{
 #profile-picture{
     border-radius: 5%;
     max-height: 300px;
+    max-width: 380px;
 }
 /*Expertise----------------------------------------------------------------*/
 #expertise{
@@ -130,22 +131,24 @@ nav i.fa-bars{
     cursor: default;
 }
 #expertise .boxes .box i{
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
-    line-height: 50px;
+    line-height: 60px;
+    font-size: 1.5rem;
     color: var(--text-content);
     background-color: var(--bg-content2);
     margin: 0 auto 10px auto;
 }
 
 #expertise .boxes .box .content h3{
-    font-weight: 500;
+    font-weight: 600;
     padding: 0.7rem;
     color: var(--text-content);
 }
 #expertise .boxes .box .content p{
     color: var(--text-content);
+    font-weight: 500;
 }
 #expertise .boxes .box:hover{
     background-color: var(--bg-navfooter)
@@ -163,16 +166,16 @@ nav i.fa-bars{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 0 2rem;
+    margin: 0 5.5rem;
 }
 #project .main-content .card{
     background-color: var(--box-content);
     border: 1px solid var(--line-light-content);
     border-radius: 6px;
     margin: 24px;
-    width: 302px;
+    width: 261px;
     position: relative;
-    min-height: 420px;
+    min-height: 374px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,8 +186,8 @@ nav i.fa-bars{
     background-size: cover;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
-    width: 300px;
-    height: 265px;
+    width: 260px;
+    height: 210px;
 }
 #project .main-content .card h3{
     text-align: center;
@@ -318,8 +321,7 @@ nav i.fa-bars{
     height: 7rem;
     width: 7rem;
 }
-#background .content .row.a .column.b::before,
-#background .content .row.b .column.b::before{
+#background .content :is(.row.a, .row.b) .column.b::before{
     content: '';
     position: absolute;
     width: 4px;
@@ -330,50 +332,40 @@ nav i.fa-bars{
 }
 /*footer------------------------------------------------------------------*/
 footer{
-    position: relative;
     background-color: var(--bg-navfooter);
-    z-index: 10;
     width: 100%;
-    bottom: 0;
 }
 .footer-top{
-    display: inline-flex;
-    position: relative;
-    width: 100%;
-    justify-content: center;
-}
-.footer-top .void{
-    content: '';
-    padding: 0 5rem;
-}
-.footer-top .content{
-    display: inline-flex;
-    align-items:flex-start;
+    display: flex;
+    width: 60%;
     justify-content: space-between;
-    border-bottom: var(--text-navfooter) 2px solid;
-    width: 65%;
+    border-bottom: var(--text-navfooter) 1px solid;
+    margin: auto;
+    padding: 1rem 0;
 }
-.footer-top .content div *,
-.footer-top .content div a{
+.footer-top div :is(h3, a){
     display: block;
-    text-align: center;
+    text-align:left;
     color: var(--text-navfooter);
-    padding: 0.5rem;
+    padding: 0.2rem;
     background:var(--bg-navfooter);
     text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
                 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
 }
+.footer-top div h3 {
+    padding-bottom: 1rem;
+}
 #download-button {
     background:var(--button-navfooter);
     color:var(--text-navfooter);
-    padding: 0.7rem 1.3rem;
+    padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
-    margin: 1rem 0 0.8rem 3rem;
+    margin-top: 4.2rem;
     transition: background 0.3s ease;
     display: inline-block;
 }
-.footer-top .content div a:hover {
+.footer-top div a:hover {
     border-radius: 4px;
     background:var(--hover-navfooter);
 }
