@@ -200,7 +200,7 @@ nav i.fa-bars{
 #project .main-content .card h3.active{
     margin-top: 35px;
 }
-#project .main-content .card.d h3.active{
+#project .main-content :is(.card.d, .card.e) h3.active{
     display: none;
 }
 #project .main-content .card p{
@@ -237,14 +237,19 @@ nav i.fa-bars{
 #project .main-content .card.d .card-bg{
     display: block;
     background-image: url('../img/sketchup.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+#project .main-content .card.e .card-bg{
+    display: block;
+    background-image: url('../img/other.jpg');
 }
 #project .main-content .card.d .card-bg.active{
     display: block;
     background-image: url('../img/crib.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+#project .main-content .card.e .card-bg.active{
+    display: block;
+    background-image: url('../img/pgsql.png');
+    background-size:contain;
 }
 /*background---------------------------------------------------------------*/
 #background{
