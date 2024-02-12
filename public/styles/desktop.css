@@ -180,6 +180,10 @@ nav i.fa-bars{
     flex-direction: column;
     align-items: center;
 }
+#project .main-content .card.c{
+    border: 3px solid;
+    border-radius: 6px;
+}
 #project .main-content .card .card-bg{
     background-repeat: no-repeat;
     background-position: center;
